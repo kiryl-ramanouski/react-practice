@@ -2,8 +2,26 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Header for random list</h1>
+    <div>
+      <Header />
+      <Technologies />
+    </div>
+  );
+}
+
+const Header = () => {
+  return (
+    <div>
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Messages</a>
+    </div>
+  );
+}
+
+const Technologies = () => {
+  return (
+    <div>
       <ul>
         <li>css</li>
         <li>html</li>
