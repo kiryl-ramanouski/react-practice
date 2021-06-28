@@ -1,3 +1,7 @@
 ul li {
   list-style-type: georgian;
 }
+
+a {
+  margin-right: 10px;
+}
