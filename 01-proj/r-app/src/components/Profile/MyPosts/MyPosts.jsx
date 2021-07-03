@@ -7,9 +7,11 @@ const MyPosts = () => {
       <h3>My Posts</h3>
       <textarea name="" id="" cols="30" rows="5"></textarea>
       <button>Add post</button>
-      <Post />
-      <Post />
-      <Post />
+
+      <div className={css.posts}>
+      <Post message="Hello, how are you?" likes="10"/>
+      <Post message="It's my second post" likes="20"/>
+      </div>
     </div>
   );
 }
