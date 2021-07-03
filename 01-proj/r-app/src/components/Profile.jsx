@@ -1,6 +1,8 @@
+import css from "./Profile.module.css"
+
 const Profile = () => {
   return (
-    <main className="content">
+    <main className={css.content}>
       <div>
         <img src="magister.jpeg" alt="magister" />
       </div>
@@ -8,7 +10,7 @@ const Profile = () => {
         Avatar + description
       </div>
       <div>
-        My Post
+        My Posts
         <div>
           New Post
         </div>
