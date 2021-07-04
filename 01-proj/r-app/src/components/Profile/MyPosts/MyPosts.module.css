@@ -1,4 +1,9 @@
+.postsBlock {
+    padding: 10px;
+}
+
 .posts {
     display: flex;
     flex-flow: column nowrap;
+    margin-top: 10px;
 }
