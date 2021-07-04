@@ -3,9 +3,9 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
   return (
-    <main className={css.content}>
+    <main>
       <div>
-        <img src="magister.jpeg" alt="magister" />
+        <img src="master.jpeg" alt="master" />
       </div>
       <div>
         Avatar + description
