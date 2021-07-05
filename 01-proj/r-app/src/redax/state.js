@@ -17,6 +17,13 @@ const state = {
             {message: "It's my second post", likes: 20},
         ],
     },
+    nav: {
+        friendsData: [
+            {avatarColor: "red", name: "Name1"},
+            {avatarColor: "yellow", name: "Name2"},
+            {avatarColor: "green", name: "Name3"},
+        ]
+    }
 }
 
 export default state;
