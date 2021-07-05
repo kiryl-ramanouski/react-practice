@@ -2,6 +2,14 @@ import css from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = () => {
+    const postsData = [
+        {message: "Hello, how are you?", likes: 10},
+        {message: "It's my second post", likes: 20},
+    ];
+    const postsElements = postsData.map((post) => {
+        return (<Post message={post.message}/>);
+    })
+
     return (
         <div className={css.postsBlock}>
             <h3>My Posts</h3>
@@ -12,8 +20,7 @@ const MyPosts = () => {
                 <button>Add post</button>
             </div>
             <div className={css.posts}>
-                <Post message="Hello, how are you?" likes="10"/>
-                <Post message="It's my second post" likes="20"/>
+                {postsElements}
             </div>
         </div>
     );
