@@ -3,22 +3,32 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = () => {
+    const dialogsData = [
+        {id: 1, name: "Name1"},
+        {id: 2, name: "Name2"},
+        {id: 3, name: "Name3"},
+    ];
+    const messagesData = [
+        {message: "Hello"},
+        {message: "Hi"},
+        {message: "How are you?"},
+    ];
+
+    const dialogsElements = dialogsData.map((dialog) => {
+        return (<DialogItem id={dialog.id} name={dialog.name}/>);
+    });
+    const messagesElements = messagesData.map((message) => {
+        return (<Message message={message.message}/>);
+    });
+
     return (
         <div className={css.dialogsBlock}>
             <div className={css.dialogsItems}>
                 <h3>My dialogs</h3>
-                <DialogItem id="1" name="Name1"/>
-                <DialogItem id="2" name="Name2"/>
-                <DialogItem id="3" name="Name3"/>
-                <DialogItem id="4" name="Name4"/>
-                <DialogItem id="5" name="Name5"/>
-                <DialogItem id="6" name="Name6"/>
+                {dialogsElements}
             </div>
             <div className={css.messages}>
-                <Message message="Hello"/>
-                <Message message="Hi"/>
-                <Message message="How are you?"/>
-                <Message message="I'm fine, thank you!"/>
+                {messagesElements}
             </div>
         </div>
     );
