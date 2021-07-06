@@ -26,4 +26,21 @@ const state = {
     }
 }
 
+export const functionality = {
+    addPost: (postMessage) => {
+        const newPost = {
+            message: postMessage,
+            likes: 0,
+        }
+        state.profilePage.postsData.push(newPost);
+    },
+
+    addMessage: (message) => {
+        const newMessage = {
+            message: message,
+        }
+        state.dialogsPage.messagesData.push(newMessage);
+    },
+}
+
 export default state;
