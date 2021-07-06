@@ -17,3 +17,10 @@
     flex-flow: column nowrap;
     padding: 10px;
 }
+
+.newMessageBlock {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
