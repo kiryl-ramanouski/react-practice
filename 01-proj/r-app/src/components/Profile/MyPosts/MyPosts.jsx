@@ -10,6 +10,7 @@ const MyPosts = (props) => {
     const addPost = () => {
         const postText = newPostElement.current.value;
         props.addPost(postText);
+        newPostElement.current.value = "";
     };
 
     return (

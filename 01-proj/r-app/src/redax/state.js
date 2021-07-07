@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 const state = {
     dialogsPage: {
         dialogsData: [
@@ -13,8 +15,8 @@ const state = {
     },
     profilePage: {
         postsData: [
-            {message: "Hello, how are you?", likes: 10},
-            {message: "It's my second post", likes: 20},
+            {id: 1, message: "Hello, how are you?", likes: 10},
+            {id: 2, message: "It's my second post", likes: 20},
         ],
     },
     nav: {
@@ -29,10 +31,12 @@ const state = {
 export const functionality = {
     addPost: (postMessage) => {
         const newPost = {
+            id: 3,
             message: postMessage,
             likes: 0,
-        }
+        };
         state.profilePage.postsData.push(newPost);
+        rerenderEntireTree(state);
     },
 
     addMessage: (message) => {
@@ -40,6 +44,7 @@ export const functionality = {
             message: message,
         }
         state.dialogsPage.messagesData.push(newMessage);
+        rerenderEntireTree(state);
     },
 }
 
